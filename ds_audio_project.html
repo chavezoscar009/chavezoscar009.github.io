@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auditory Pain Detection | ML Project</title>
+
+  <style>
+
+    /* NAVBAR */
+    .navbar {
+    background-color: #111827; /* dark slate */
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+
+    .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    }
+
+    .nav-menu li {
+    position: relative;
+    }
+
+    .nav-menu a {
+    color: #fde047; /* yellow */
+    text-decoration: none;
+    font-weight: 500;
+    }
+
+    .nav-menu a:hover {
+    text-decoration: underline;
+    }
+
+    /* DROPDOWN */
+    .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f2933;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    min-width: 180px;
+    border-radius: 4px;
+    }
+
+    .dropdown-menu li {
+    padding: 0.4rem 1rem;
+    }
+
+    .dropdown-menu a {
+    color: #fde047;
+    display: block;
+    }
+
+    .dropdown:hover .dropdown-menu {
+    display: block;
+    }
+
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fb;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #4b5563;
+    }
+
+    .highlight {
+      background: #eef2ff;
+      border-left: 4px solid #4f46e5;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+    
+    <nav class="navbar">
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+      <a href="#">Academic</a>
+      <ul class="dropdown-menu">
+        <li><a href="left-sidebar.html">Research Papers</a></li>
+        <li><a href="right-sidebar.html">CV</a></li>
+      </ul>
+    </li>
+
+    <li><a href="DS_Projects.html">Data Science Projects</a></li>
+    <li><a href="ds_resume.html">Tech Resume</a></li>
+    <li><a href="Personal.html">Personal</a></li>
+    <li><a href="outreach.html">Outreach</a></li>
+  </ul>
+</nav>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <h1>Auditory Pain Detection Using Machine Learning</h1>
+    <p class="subtitle">
+      Exploring whether vocal signals alone can be used to identify pain states
+    </p>
+
+    <!-- OVERVIEW -->
+    <h2>Overview</h2>
+    <p>
+      This project investigates whether audio data can be used to classify whether
+      an individual is experiencing pain. By analyzing vocal patterns in recorded
+      speech and sounds, we explore the feasibility of building machine learning
+      models that could support medical decision-making in low-information or remote
+      settings, such as telephone-based healthcare services.
+    </p>
+
+    <!-- GOAL -->
+    <h2>Project Goal</h2>
+    <p>
+      The primary goal of this project was to determine whether pain can be reliably
+      classified from audio recordings using machine learning techniques. In
+      particular, we aimed to understand how different modeling strategies perform
+      under realistic constraints such as limited training data and variability
+      across individual speakers.
+    </p>
+
+    <!-- METHODS -->
+    <h2>Approach & Methods</h2>
+    <p>
+      We began by developing a custom neural network trained directly on
+      audio-derived features. While this approach showed moderate success, model
+      performance was limited by the small size of the available dataset.
+    </p>
+    <p>
+      To address this limitation, we adopted a transfer learning approach using
+      embeddings from a large pre-trained audio–text model (CLAP). These embeddings
+      provided richer acoustic representations, which were then fine-tuned for the
+      pain classification task.
+    </p>
+    <p>
+      Model performance was evaluated under two data-splitting strategies:
+    </p>
+    <ul>
+      <li>
+        <strong>Random splits:</strong> samples from the same individual may appear
+        in both training and testing sets.
+      </li>
+      <li>
+        <strong>Person-level splits:</strong> models are trained on one group of
+        individuals and tested on entirely unseen speakers.
+      </li>
+    </ul>
+
+    <!-- FINDINGS -->
+    <h2>Key Findings</h2>
+    <div class="highlight">
+      <p>
+        Models evaluated using random splits achieved higher accuracy, indicating
+        that CLAP embeddings capture meaningful signals related to pain. However,
+        performance dropped significantly when evaluated on unseen speakers using
+        person-level splits.
+      </p>
+    </div>
+
+    <!-- INTERPRETATION -->
+    <h2>Interpretation</h2>
+    <p>
+      The performance gap between random and person-level splits suggests that
+      speaker identity plays a substantial role in model predictions. Without a
+      baseline understanding of an individual’s normal vocal characteristics, the
+      model struggles to distinguish between voice-specific traits and changes
+      associated with pain.
+    </p>
+    <p>
+      This highlights a key challenge in clinical audio modeling: generalization
+      across speakers may require explicit normalization or personalized reference
+      signals.
+    </p>
+
+    <!-- APPLICATIONS -->
+    <h2>Potential Applications</h2>
+    <p>
+      Despite these challenges, audio-based pain detection has promising
+      applications in remote and telephone-based medical services, where visual or
+      physiological measurements may be unavailable. Such a system could serve as
+      an auxiliary diagnostic tool to help clinicians flag potential pain states and
+      prioritize follow-up care.
+    </p>
+
+    <!-- LIMITATIONS -->
+    <h2>Limitations</h2>
+    <ul>
+      <li>Small labeled dataset</li>
+      <li>Limited speaker diversity</li>
+      <li>No personalized baseline modeling</li>
+      <li>Binary classification rather than pain intensity estimation</li>
+    </ul>
+
+    <!-- FUTURE -->
+    <h2>Future Work</h2>
+    <p>
+      Several extensions could significantly improve performance and clinical
+      relevance:
+    </p>
+    <ul>
+      <li>Incorporating speaker-specific baseline or normalization strategies</li>
+      <li>Expanding the dataset across individuals and recording conditions</li>
+      <li>Exploring multimodal inputs (e.g., audio + transcripts)</li>
+      <li>Predicting pain intensity or uncertainty rather than binary labels</li>
+      <li>Evaluating fairness and robustness across demographics</li>
+    </ul>
+
+    <!-- CONTINUE -->
+    <h2>Continuing the Project</h2>
+    <p>
+      This project is designed to be extensible. Future contributors could build on
+      this work by adding new datasets, experimenting with alternative embeddings,
+      deploying the model as an inference API, or integrating it into clinical
+      decision-support workflows.
+    </p>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Project by Óscar A. Chávez Ortiz ·
+        <a href="https://github.com/astroscar09/tame_pain_analysis" target="_blank">GitHub Page</a>
+      </p>
+    </footer>
+
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

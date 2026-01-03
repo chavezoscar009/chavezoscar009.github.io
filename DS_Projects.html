@@ -65,7 +65,7 @@
                     <p> <span style="color: black;">
                         
                         A showcase of personal data science experiments and machine learning work outside my research that I dabbled with.
-                        If you are interested in my tech resume look here: <a href="ds_resume.html" style="color: blue; text-decoration: underline;"> here.</a>
+                        If you are interested in my tech resume look <a href="ds_resume.html" style="color: blue; text-decoration: underline;"> here.</a>
 
                         </span>
                     </p>
@@ -73,8 +73,37 @@
 
                 <!-- Project 1 -->
                 <div class="project">
-                    <h3>Golf Ball Hypothesis Testing</h3>
-                    <p>Performed statistical hypothesis testing to determine if a new golf ball design improves performance significantly. Explored p-values, confidence intervals, and data visualization to support conclusions.</p>
+                    <h3><a href="ds_final_ml_project.html"> Auditory Pain Analysis (Medical Application) </a></h3>
+                    <p> 
+                        This project investigates whether vocal characteristics can be used to classify physical pain from audio recordings. 
+                        Initial experiments with a custom neural network showed moderate performance but were limited by the small size of the training dataset. 
+                        To address this, we leveraged pretrained audio representations using the CLAP model and evaluated multiple machine learning approaches built on top of these embeddings.
+                    </br>
+                    </br>
+                        We found that models trained with randomly sampled train–test splits achieved higher accuracy, while performance dropped significantly when splitting data by speaker identity. 
+                        This indicates that the models rely heavily on speaker-specific vocal features and struggle to generalize to unseen voices without an established baseline. 
+                        These findings highlight the importance of speaker normalization and motivate future work focused on learning speaker-invariant representations, with potential applications in remote and telephone-based medical triage systems.
+                        
+                    </p>
+                </div>
+
+                <div class="project">
+                    <h3><a href="ds_final_ml_project.html"> ML Comparison: Predicting Lyman-α Emission with Machine Learning </a></h3>
+                    <p> 
+                        The Epoch of Reionization (EoR) marks the final major phase transition of the universe, during which neutral hydrogen became fully ionized. 
+                        Understanding the timing and progression of this era remains challenging due to limited observational tracers and the strong absorption of key emission lines by neutral hydrogen at early times. 
+                        Lyman-α emission is a powerful probe of this process, but its observability depends sensitively on both galaxy properties and surrounding hydrogen.
+                        </br>
+                        </br>
+                        In this project, we analyze over 11,000 galaxies at lower redshift—where the universe is fully ionized—to model the intrinsic Lyman-α emission using machine learning. 
+                        Physical galaxy properties were inferred using Bayesian modeling, and multiple ML approaches were evaluated to predict the rest-frame Lyman-α equivalent width.
+                        </br>
+                    </br>
+                        We compare neural networks, Random Forests, Decision Trees, and XGBoost models, finding that XGBoost achieves the best overall performance. 
+                        Using SHAP interpretability, we identify star formation rate and dust attenuation as the dominant drivers of Lyman-α emission. 
+                        These results provide a physically interpretable framework for predicting intrinsic Lyman-α emission, enabling future constraints on the neutral hydrogen fraction during the Epoch of Reionization.
+
+                    </p>
                 </div>
 
                 <!-- Project 2 -->

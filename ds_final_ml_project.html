@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auditory Pain Detection | ML Project</title>
+
+  <style>
+
+    /* NAVBAR */
+    .navbar {
+    background-color: #111827; /* dark slate */
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+
+    .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    }
+
+    .nav-menu li {
+    position: relative;
+    }
+
+    .nav-menu a {
+    color: #fde047; /* yellow */
+    text-decoration: none;
+    font-weight: 500;
+    }
+
+    .nav-menu a:hover {
+    text-decoration: underline;
+    }
+
+    /* DROPDOWN */
+    .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f2933;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    min-width: 180px;
+    border-radius: 4px;
+    }
+
+    .dropdown-menu li {
+    padding: 0.4rem 1rem;
+    }
+
+    .dropdown-menu a {
+    color: #fde047;
+    display: block;
+    }
+
+    .dropdown:hover .dropdown-menu {
+    display: block;
+    }
+
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fb;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #4b5563;
+    }
+
+    .highlight {
+      background: #eef2ff;
+      border-left: 4px solid #4f46e5;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+    
+    <nav class="navbar">
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+      <a href="#">Academic</a>
+      <ul class="dropdown-menu">
+        <li><a href="left-sidebar.html">Research Papers</a></li>
+        <li><a href="right-sidebar.html">CV</a></li>
+      </ul>
+    </li>
+
+    <li><a href="DS_Projects.html">Data Science Projects</a></li>
+    <li><a href="ds_resume.html">Tech Resume</a></li>
+    <li><a href="Personal.html">Personal</a></li>
+    <li><a href="outreach.html">Outreach</a></li>
+  </ul>
+</nav>
+
+  <div class="container">
+
+    <h1>Predicting Lyman-α Emission with Machine Learning</h1>
+
+    <h2>Scientific Background</h2>
+    <p>
+      The Epoch of Reionization (EoR) represents the final major phase transition of the universe,
+      during which neutral hydrogen became fully ionized. Although quasars provide evidence of this
+      transition, constructing a complete timeline remains difficult due to absorption of key
+      emission lines at early times.
+    </p>
+    <p>
+      Lyman-α emission is a sensitive tracer of neutral hydrogen and is produced abundantly in
+      star-forming galaxies. However, its observability is strongly suppressed by scattering in
+      neutral gas, complicating its use as a probe of reionization.
+    </p>
+
+    <h2>Project Goal</h2>
+    <div class="highlight">
+      <strong>Can machine learning accurately predict intrinsic Lyman-α emission from a galaxy using its physical properties?</strong>
+    </div>
+    <p>
+      By studying galaxies at lower redshift—where the universe is fully ionized—we aim to model
+      the intrinsic Lyman-α equivalent width and identify the galaxy properties that drive its
+      observability.
+    </p>
+
+    <h2>Data</h2>
+    <p>
+      Our dataset consists of over <strong>11,000 galaxies</strong> with physical properties inferred
+      using Bayesian modeling. After applying quality cuts on photometric fits, signal-to-noise, and
+      equivalent width, a clean subset was used for machine learning analysis.
+    </p>
+    <ul>
+      <li>Star formation rate (SFR)</li>
+      <li>Dust attenuation (A<sub>V</sub>)</li>
+      <li>Stellar mass and age</li>
+      <li>Metallicity and ionization parameter</li>
+      <li>Redshift</li>
+    </ul>
+
+    <h2>Machine Learning Models</h2>
+    <p>
+      We evaluated several non-linear regression models to predict the rest-frame Lyman-α equivalent width:
+    </p>
+    <ul>
+      <li> <strong>Neural Networks (PyTorch) (My Role) </strong></li>
+      <li>Random Forest Regression</li>
+      <li>Decision Trees</li>
+      <li>XGBoost</strong></li>
+    </ul>
+
+    <h2>Results</h2>
+    <div class="highlight">
+      <strong>XGBoost achieved the best predictive performance</strong>, outperforming neural networks
+      and tree-based models, with prediction errors of approximately 60–80 Å.
+    </div>
+    <p>
+      Neural networks performed competitively but struggled at high equivalent widths due to data
+      sparsity. Decision Trees showed limited predictive power, while Random Forests achieved moderate success.
+    </p>
+
+    <h2>Feature Importance & Interpretability</h2>
+    <p>
+      Using SHAP analysis on the XGBoost model, we identified the most influential physical drivers
+      of Lyman-α emission:
+    </p>
+    <ul>
+      <li><strong>Star formation rate (SFR)</strong></li>
+      <li><strong>Dust attenuation (A<sub>V</sub>)</strong></li>
+      <li>Mass-weighted stellar age</li>
+      <li>Redshift</li>
+      <li>Stellar mass</li>
+    </ul>
+    <p>
+      These results provide physically interpretable insights into the processes that regulate
+      Lyman-α escape from galaxies.
+    </p>
+
+    <h2>Scientific Impact</h2>
+    <p>
+      This framework enables predictions of intrinsic Lyman-α emission, which can be applied at
+      higher redshifts to constrain the neutral hydrogen fraction during the Epoch of Reionization.
+      By combining machine learning with physical interpretability, this work bridges data-driven
+      modeling and astrophysical insight.
+    </p>
+
+    <h2>Future Work</h2>
+    <ul>
+      <li>Expand the training set to include noisier and higher-EW galaxies</li>
+      <li>Explore deeper neural network architectures and alternative loss functions</li>
+      <li>Improve underlying galaxy property inference pipelines</li>
+    </ul>
+
+    <h2>Full Project Report</h2>
+        <p>
+        Below is the full technical report for this project, including methodology,
+        model comparisons, and visualizations.
+        </p>
+
+        <iframe
+        src="files/SDS_Project_Description.pdf"
+        width="100%"
+        height="800px"
+        style="border: 1px solid #ccc; border-radius: 8px;"
+        >
+        </iframe>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Project by Óscar A. Chávez Ortiz ·
+        <a href="https://github.com/astroscar09/Model_Selection_ML" target="_blank">GitHub Page</a>
+      </p>
+    </footer>
+
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
