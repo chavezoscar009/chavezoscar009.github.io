@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hypothesis Testing</title>
+
+  <style>
+
+    /* NAVBAR */
+    .navbar {
+    background-color: #111827; /* dark slate */
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+
+    .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    }
+
+    .nav-menu li {
+    position: relative;
+    }
+
+    .nav-menu a {
+    color: #fde047; /* yellow */
+    text-decoration: none;
+    font-weight: 500;
+    }
+
+    .nav-menu a:hover {
+    text-decoration: underline;
+    }
+
+    /* DROPDOWN */
+    .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f2933;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    min-width: 180px;
+    border-radius: 4px;
+    }
+
+    .dropdown-menu li {
+    padding: 0.4rem 1rem;
+    }
+
+    .dropdown-menu a {
+    color: #fde047;
+    display: block;
+    }
+
+    .dropdown:hover .dropdown-menu {
+    display: block;
+    }
+
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fb;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #4b5563;
+    }
+
+    .highlight {
+      background: #eef2ff;
+      border-left: 4px solid #4f46e5;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+            <a href="#">Academic</a>
+            <ul class="dropdown-menu">
+                <li><a href="left-sidebar.html">Research Papers</a></li>
+                <li><a href="right-sidebar.html">CV</a></li>
+            </ul>
+            </li>
+
+            <li><a href="DS_Projects.html">Data Science Projects</a></li>
+            <li><a href="ds_resume.html">Tech Resume</a></li>
+            <li><a href="Personal.html">Personal</a></li>
+            <li><a href="outreach.html">Outreach</a></li>
+        </ul>
+    </nav>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <h1>Hypothesis Testing</h1>
+    <p class="subtitle">
+      Explore whether a new golf ball design gave better performance than the currently available one
+    </p>
+
+    <!-- OVERVIEW -->
+    <h2>Overview</h2>
+    <p> 
+        Par Inc., is a major manufacturer of golf equipment. Management believes that Par’s market share could be increased with the introduction of a cut-resistant, longer-lasting golf ball. 
+        Therefore, the research group at Par has been investigating a new golf ball coating designed to resist cuts and provide a more durable ball. 
+        The tests with the coating have been promising. One of the researchers voiced concern about the effect of the new coating on driving distances. 
+        Par would like the new cut-resistant ball to offer driving distances comparable to those of the current-model golf ball. 
+        To compare the driving distances for the two balls, 40 balls of both the new and current models were subjected to distance tests. 
+        The testing was performed with a mechanical hitting machine so that any difference between the mean distances for the two models could be attributed to a difference in the design.
+    </p>
+
+    <!-- GOAL -->
+    <h2>Project Goal</h2>
+    <p>
+        <ul>
+        <li> Formulate and present the rationale for a hypothesis test that par
+        could use to compare the driving distances of the current and new
+        golf balls </li>
+        <li> Analyze the data to provide the hypothesis testing conclusion. What
+        is the p-value for your test? What is your recommendation for Par
+        Inc.?</li>
+        <li> Provide descriptive statistical summaries of the data for each model</li>
+        <li> What is the 95% confidence interval for the population mean of each
+        model, and what is the 95% confidence interval for the difference
+        between the means of the two population?</li>
+        <li> Do you see a need for larger sample sizes and more testing with the
+        golf balls? Discuss</li>
+        </ul>
+    </p>
+
+    
+
+    
+
+    <!-- METHODS -->
+    <h2>Approach & Methods</h2>
+
+    <p>
+        We conducted a series of statistical analyses to compare the driving distances of the current and new golf balls. 
+        Data from 40 samples for each ball were collected, and we performed normality checks using the Shapiro-Wilk test. 
+        We then applied paired, independent, and one-sample t-tests to assess whether there were significant differences in performance between the two models. 
+        All analyses were logged and results were saved for reproducibility.
+    </p>
+    
+
+    <!-- FINDINGS -->
+    <h2>Key Findings</h2>
+        <div class="highlight">
+        <ul>
+                <li>The 95% confidence interval for the current ball's driving distance is approximately 267.5 – 273.1 yards.</li>
+                <li>The 95% confidence interval for the new ball's driving distance is approximately 264.3 – 270.7 yards.</li>
+                <li>The 95% confidence interval for the difference (New – Current) is approximately –7.17 – 1.62 yards.</li>
+                <li>All t-tests (paired, independent, and one-sample) failed to reject the null hypothesis, indicating no statistically significant improvement with the new ball.</li>
+            </ul>
+        </div>
+
+
+    <!-- INTERPRETATION -->
+    <h2>Interpretation</h2>
+
+        <p>
+            The new golf ball does not demonstrate a statistically significant improvement over the current model based on the samples tested. 
+            The confidence interval for the difference includes zero, suggesting that the new ball could be slightly worse or slightly better, but the data are inconclusive.
+        </p>
+    
+
+    <!-- APPLICATIONS -->
+    <h2>Potential Applications</h2>
+
+        <p>
+            These findings provide an evidence-based assessment for Par Inc. when evaluating new golf ball designs. 
+        Decisions about product adoption or marketing claims should be guided by this statistical analysis rather than assumptions about performance.
+
+        </p>
+    
+
+    <!-- LIMITATIONS -->
+    <h2>Limitations</h2>
+        <p>
+            The main limitation of this study is the sample size. With only 40 drives per ball, the confidence intervals are relatively wide, limiting the ability to detect small differences in performance. 
+            Additionally, other factors such as environmental conditions may not have been controlled in this analysis.
+        </p>
+
+
+    <!-- FUTURE -->
+    <h2>Future Work</h2>
+        <p>
+            Future studies should include larger sample sizes to reduce uncertainty and increase statistical power. 
+            Testing under a variety of conditions and with multiple players would also help assess the consistency and reliability of any observed differences.
+        </p>
+
+    
+
+    <!-- CONTINUE -->
+    <h2>Continuing the Project</h2>
+
+        <p>
+            We plan to expand this experiment with more drives and additional golf ball prototypes. 
+            As more data are collected, we will update the analysis to provide a clearer understanding of performance differences and potentially refine our statistical approach to include effect size and power calculations.
+        </p>
+
+    
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Project by Óscar A. Chávez Ortiz ·
+        <a href="https://github.com/astroscar09/DS/tree/main/Hypothesis_Testing" target="_blank">GitHub Page</a>
+      </p>
+    </footer>
+
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
