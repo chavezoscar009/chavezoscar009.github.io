@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Airline Delay: Automated SQL Analysis</title>
+
+  <style>
+
+    /* NAVBAR */
+    .navbar {
+    background-color: #111827; /* dark slate */
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+
+    .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    }
+
+    .nav-menu li {
+    position: relative;
+    }
+
+    .nav-menu a {
+    color: #fde047; /* yellow */
+    text-decoration: none;
+    font-weight: 500;
+    }
+
+    .nav-menu a:hover {
+    text-decoration: underline;
+    }
+
+    /* DROPDOWN */
+    .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f2933;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    min-width: 180px;
+    border-radius: 4px;
+    }
+
+    .dropdown-menu li {
+    padding: 0.4rem 1rem;
+    }
+
+    .dropdown-menu a {
+    color: #fde047;
+    display: block;
+    }
+
+    .dropdown:hover .dropdown-menu {
+    display: block;
+    }
+
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fb;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #4b5563;
+    }
+
+    .highlight {
+      background: #eef2ff;
+      border-left: 4px solid #4f46e5;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+    
+    <nav class="navbar">
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+      <a href="#">Academic</a>
+      <ul class="dropdown-menu">
+        <li><a href="left-sidebar.html">Research Papers</a></li>
+        <li><a href="right-sidebar.html">CV</a></li>
+      </ul>
+    </li>
+
+    <li><a href="DS_Projects.html">Data Science Projects</a></li>
+    <li><a href="ds_resume.html">Tech Resume</a></li>
+    <li><a href="Personal.html">Personal</a></li>
+    <li><a href="outreach.html">Outreach</a></li>
+  </ul>
+</nav>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <h1>Airline Delay: Automated SQL Query and Visualization Tool</h1>
+    <p class="subtitle">
+       Designed and implemented a SQLite-based data pipeline that automates ingestion of airline delay data,
+  enforces ingestion tracking, and produces analytics-ready SQL views for downstream visualization tools
+  such as Tableau and other BI platforms.
+    </p>
+
+ <!-- OVERVIEW -->
+<h2>Overview</h2>
+<p>
+  This project demonstrates end-to-end database design and automation using SQL and Python. The pipeline
+  ingests raw airline delay files into a structured SQLite database, tracks file-level ingestion state,
+  and generates reusable SQL views optimized for analysis and visualization.
+</p>
+
+<!-- GOAL -->
+<h2>Project Goal</h2>
+<p>
+  The primary goal of this project is to showcase practical SQL skills, including database schema design,
+  automated data ingestion, and transformation of raw data into visualization-ready tables that can be
+  consumed directly by business intelligence tools.
+</p>
+
+<!-- METHODS -->
+<h2>Approach & Methods</h2>
+<p>
+  A relational SQLite database was designed with separate tables for raw airline delay records and file
+  ingestion tracking. The ingestion pipeline automatically detects new data files placed in a designated
+  <code>data/raw</code> directory and appends their contents to the main airlines table.
+</p>
+<p>
+  An ingestion log table ensures idempotency by preventing duplicate inserts, while SQL views are used
+  to pre-aggregate and reshape the data into analysis-friendly formats suitable for visualization tools
+  such as Tableau.
+</p>
+
+<!-- FINDINGS -->
+<h2>Key Findings</h2>
+<div class="highlight">
+  <p>
+    The pipeline enables reliable, repeatable ingestion of airline delay data and produces consistent,
+    visualization-ready datasets without requiring manual data cleaning or transformation.
+  </p>
+</div>
+
+<!-- INTERPRETATION -->
+<h2>Interpretation</h2>
+<p>
+  This project illustrates how thoughtful database design and SQL-based transformations can simplify
+  downstream analytics workflows. By pushing data cleaning and aggregation into the database layer,
+  visualization tools can operate on stable, well-defined tables and views.
+    
+  The end data product can then be used into any visualization software such as Tableau or Power BI.
+  A use of this can be found using Tableau Public: <a href="https://public.tableau.com/app/profile/oscar.chavez.ortiz/viz/NewAirlineData/Dashboard1" target="_blank">Here</a>.
+
+</p>
+<p>
+  The use of an ingestion tracking table reflects real-world data engineering practices, ensuring that
+  the pipeline can be safely rerun as new data becomes available.
+</p>
+
+<!-- APPLICATIONS -->
+<h2>Potential Applications</h2>
+<p>
+  This architecture is applicable to any recurring data ingestion problem, including operational metrics,
+  financial reporting, and ETL pipelines where new data files arrive incrementally and must be integrated
+  into an existing database for analysis.
+</p>
+
+<!-- LIMITATIONS -->
+<h2>Limitations</h2>
+<ul>
+  <li>Uses SQLite, which is not optimized for high-concurrency or very large datasets</li>
+  <li>Designed for batch ingestion rather than real-time streaming data</li>
+  <li>Relies on consistent input file schemas</li>
+</ul>
+
+<!-- FUTURE -->
+<h2>Future Work</h2>
+<p>
+  Future enhancements could include migrating to a production-grade database (e.g., PostgreSQL),
+  adding data validation checks, supporting incremental updates, and integrating automated reporting
+  or dashboard refresh workflows.
+</p>
+
+<!-- CONTINUE -->
+<h2>Continuing the Project</h2>
+<p>
+  The project can be extended to support additional data sources, more complex SQL transformations,
+  and tighter integration with visualization platforms. The modular design allows the ingestion and
+  transformation logic to be reused for similar database-driven analytics projects.
+</p>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Project by Óscar A. Chávez Ortiz ·
+        <a href="https://github.com/astroscar09/airline_delay_project   " target="_blank">GitHub Page</a>
+      </p>
+    </footer>
+
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
