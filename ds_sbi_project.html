@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auditory Pain Detection | ML Project</title>
+
+  <style>
+
+    /* NAVBAR */
+    .navbar {
+    background-color: #111827; /* dark slate */
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+
+    .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    }
+
+    .nav-menu li {
+    position: relative;
+    }
+
+    .nav-menu a {
+    color: #fde047; /* yellow */
+    text-decoration: none;
+    font-weight: 500;
+    }
+
+    .nav-menu a:hover {
+    text-decoration: underline;
+    }
+
+    /* DROPDOWN */
+    .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f2933;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    min-width: 180px;
+    border-radius: 4px;
+    }
+
+    .dropdown-menu li {
+    padding: 0.4rem 1rem;
+    }
+
+    .dropdown-menu a {
+    color: #fde047;
+    display: block;
+    }
+
+    .dropdown:hover .dropdown-menu {
+    display: block;
+    }
+
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fb;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #4b5563;
+    }
+
+    .highlight {
+      background: #eef2ff;
+      border-left: 4px solid #4f46e5;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+    
+    <nav class="navbar">
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+      <a href="#">Academic</a>
+      <ul class="dropdown-menu">
+        <li><a href="left-sidebar.html">Research Papers</a></li>
+        <li><a href="right-sidebar.html">CV</a></li>
+      </ul>
+    </li>
+
+    <li><a href="DS_Projects.html">Data Science Projects</a></li>
+    <li><a href="ds_resume.html">Tech Resume</a></li>
+    <li><a href="Personal.html">Personal</a></li>
+    <li><a href="outreach.html">Outreach</a></li>
+  </ul>
+</nav>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <h1>Python Package: Lyra</h1>
+    <p class="subtitle">
+      Developed a Python package that does Inference of Lyman-alpha equivalent widths conditioned on galaxy properties
+    </p>
+
+    <!-- OVERVIEW -->
+<h2>Overview</h2>
+<p>
+  <strong>Lyra</strong> is a Python package for fast, accurate Bayesian inference of galaxy physical properties using
+  simulation-based inference (SBI). Trained on over <strong>11 million simulated galaxies</strong>, Lyra enables users
+  to perform high-fidelity posterior inference without the computational cost of traditional likelihood-based methods.
+  The package is designed to be lightweight, reproducible, and easy to integrate into existing analysis pipelines.
+</p>
+
+<!-- GOAL -->
+<h2>Project Goal</h2>
+<p>
+  The primary goal of Lyra is to democratize state-of-the-art Bayesian inference for large astronomical datasets.
+  By leveraging SBI, Lyra provides robust posterior estimates of Lyman-alpha EW at scale, making precise inference
+  feasible even for surveys containing tens to hundreds of thousands of objects.
+</p>
+
+<!-- METHODS -->
+<h2>Approach & Methods</h2>
+<p>
+  Lyra uses neural density estimation techniques from the <code>sbi</code> framework to learn the conditional
+  distribution of galaxy physical parameters given observable features. The model is trained on a massive suite of
+  galaxies that span a wide range of astrophysical conditions, ensuring strong generalization across
+  parameter space.
+</p>
+<p>
+  Once trained, inference reduces to a forward pass through the neural network, allowing posterior sampling to be
+  performed orders of magnitude faster than traditional MCMC or nested sampling approaches. The trained models are
+  distributed with the package and can be accessed locally after installation.
+</p>
+
+<!-- FINDINGS -->
+<h2>Key Findings</h2>
+<div class="highlight">
+  <p>
+    Lyra achieves accurate and well-calibrated posterior estimates across a broad range of galaxy properties,
+    demonstrating that simulation-based inference can match — and in many cases outperform — classical inference
+    techniques while reducing computational cost by several orders of magnitude. Lyra hosts different models models 
+    conditioned on different groups of galaxy properties so that it is highly flexible to anyone's dataset.
+  </p>
+</div>
+
+<!-- INTERPRETATION -->
+<h2>Interpretation</h2>
+<p>
+  These results highlight the power of simulation-based inference for modern astronomical surveys, where dataset sizes
+  increasingly exceed the limits of traditional Bayesian workflows. By learning the inference problem directly from
+  the galaxies, Lyra bypasses explicit likelihood construction while retaining full posterior information.
+</p>
+<p>
+  The scale of the training data (over 11 million galaxies) enables Lyra to capture complex, non-linear relationships
+  between observables and physical parameters, resulting in stable and physically meaningful posteriors even in
+  low signal-to-noise regimes.
+</p>
+
+<!-- APPLICATIONS -->
+<h2>Potential Applications</h2>
+<p>
+  Lyra is well-suited for large survey analyses, including population studies, and exploratory inference where fast posterior evaluation is critical.
+  The big goal of Lyra is to be used for reionization based studies where the astronomical community can use this tool to 
+  infer the Lyman-alpha equivalent width distribution on a per galaxy basis tied to their galaxy properties. 
+  This can be used to then infer what the IGM evolution is and thuse infer what the neutral Hydrogen content is.  
+  The package is designed to integrate seamlessly with existing Python-based astronomy workflows.
+</p>
+
+<!-- LIMITATIONS -->
+<h2>Limitations</h2>
+<ul>
+  <li>Inference quality is limited by the fidelity and coverage of the training simulations</li>
+  <li>Currently supports a fixed set of trained models and parameterizations</li>
+  <li>Not a replacement for detailed object-by-object modeling when bespoke likelihoods are required</li>
+</ul>
+
+<!-- FUTURE -->
+<h2>Future Work</h2>
+<p>
+  Future development will focus on expanding the range of supported galaxy models, add in more functionality into the code so that anyone can perform their own training. 
+  Another avenue for exploration can be to provide the community with the training and testing data so thay the community can use this in addition to their data for further 
+  training and inference. 
+</p>
+
+<!-- CONTINUE -->
+<h2>Continuing the Project</h2>
+<p>
+  Lyra is actively developed as an open and extensible tool. Users can install the package locally via <code>pip</code>,
+  access pre-trained models, and incorporate Lyra into their own analysis pipelines. Contributions, feedback, and
+  extensions are encouraged to help evolve Lyra alongside the needs of the astronomical community.
+</p>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Project by Óscar A. Chávez Ortiz ·
+        <a href="https://github.com/astroscar09/lyra" target="_blank">GitHub Page</a>
+      </p>
+    </footer>
+
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
