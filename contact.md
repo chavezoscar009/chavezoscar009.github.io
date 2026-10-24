@@ -9,7 +9,7 @@ The simplest way to reach me is by email or LinkedIn — I try to respond to bot
 
 <ul class="actions">
 	<li><a href="mailto:chavezoscar009@gmail.com" class="button primary icon solid fa-envelope">Email me</a></li>
-	<li><a href="www.linkedin.com/in/chavezoscar009" class="button icon brands fa-linkedin-in" target="_blank" rel="noopener">Connect on LinkedIn</a></li>
+	<li><a href="https://www.linkedin.com/in/chavezoscar009" class="button icon brands fa-linkedin-in" target="_blank" rel="noopener">Connect on LinkedIn</a></li>
 </ul>
 
 If you're interested in my code, my projects and research-adjacent repositories live on GitHub: [github.com/chavezoscar009](https://github.com/chavezoscar009) (personal) and [github.com/astroscar09](https://github.com/astroscar09) (research).
