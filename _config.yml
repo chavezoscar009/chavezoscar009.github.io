@@ -13,11 +13,3 @@ plugins:
 exclude:
   - README.txt
   - LICENSE.txt
-  - CNAME.example
-
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"

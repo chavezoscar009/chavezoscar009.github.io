@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="wrapper style1">
+	<div class="container">
+		<header class="major">
+			<h1>{{ page.title }}</h1>
+			{% if page.summary %}<p>{{ page.summary }}</p>{% endif %}
+		</header>
+
+		{% if page.image %}
+		<span class="image fit"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" /></span>
+		{% endif %}
+
+		{{ content }}
+
+		{% if page.github_url %}
+		<ul class="actions">
+			<li><a href="{{ page.github_url }}" class="button primary" target="_blank" rel="noopener">View on GitHub</a></li>
+		</ul>
+		{% endif %}
+
+		<p><a href="{{ '/projects/' | relative_url }}">&larr; Back to all projects</a></p>
+	</div>
+</div>

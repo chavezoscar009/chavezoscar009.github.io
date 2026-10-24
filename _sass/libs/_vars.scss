@@ -1,13 +1,11 @@
 // Misc.
 	$misc: (
-		z-index-base:		10000,
 		z-index-overlay:	100000,
 		max-spotlight:		20
 	);
 
 // Duration.
 	$duration: (
-		navPanel:			0.5s,
 		transition:			0.2s,
 		landing-fadein:		1.5s
 	);
@@ -17,7 +15,6 @@
 		border-radius:		4px,
 		element-height:		3em,
 		element-margin:		2em,
-		navPanel:			275px,
 		container-width:	70em
 	);
 

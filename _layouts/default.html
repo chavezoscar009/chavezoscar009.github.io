@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% include head.html %}
+	</head>
+	<body class="is-preload{% if page.body_class %} {{ page.body_class }}{% endif %}">
+		<div id="page-wrapper">
+			{% include header.html %}
+			{{ content }}
+			{% include footer.html %}
+		</div>
+		<script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
+		{% if page.extra_js %}{% for src in page.extra_js %}<script src="{{ src | relative_url }}"></script>{% endfor %}{% endif %}
+	</body>
+</html>
