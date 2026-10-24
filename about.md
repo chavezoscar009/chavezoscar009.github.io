@@ -12,7 +12,7 @@ I currently work in higher education, in assessment and data analytics, where I 
 
 What motivates me hasn't changed much since graduate school: I like taking a messy, large dataset and finding the signal in it, whether that signal is a galaxy's chemical history or a pattern in how students learn. I'm equally interested in the people side of that work — mentoring students, building tools other people can use, and making technical work legible to the people who need to act on it.
 
-## Outreach &amp; Mentorship
+## Outreach & Mentorship {#outreach-mentorship}
 
 A core part of my work as an astronomer has been sharing science beyond the classroom and research group. I'm deeply committed to outreach, mentorship, and creating pathways into STEM for students from historically underrepresented backgrounds.
 
