@@ -2,3 +2,11 @@
 .vscode/*
 .DS_Store
 .DS_Store/*
+
+# Jekyll build output (GitHub Pages builds this remotely; no need to commit it)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+Gemfile.lock

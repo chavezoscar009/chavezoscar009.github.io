@@ -36,11 +36,11 @@ I play guitar and I'm passionate about rock, blues rock, and soul rock. Music is
 
 You can check out some of my playing on [SoundCloud](https://soundcloud.com/chavezoscar009) or see live performances on my [YouTube channel](https://www.youtube.com/@chavezoscar009/videos).
 
-### Playing soccer &amp; fitness
+### Playing soccer & fitness
 
 I enjoy playing soccer whenever I'm healthy and able to — I've been playing since I was 7. It's technically challenging but also genuinely beautiful to watch when you see great ball control, individual skill, and teamwork; I suppose that's why they call it the beautiful game. I love the challenge and camaraderie that comes from playing on a team. On weekends you can probably find me on the pitch with my team, HeartBeat City FC, and I'll dabble in pick-up soccer too, mostly just to have fun and keep the touch up.
 
-### Playing board &amp; card games
+### Playing board & card games
 
 I love hosting game nights and playing board and card games with friends — one of my favorite ways to unwind and connect with people. There's something about a good game that brings people together, and the strategy involved in winning always fascinates me.
 
@@ -63,5 +63,5 @@ My love of music goes well beyond playing guitar. I've had the pleasure of seein
 - Santana
 - Greta Van Fleet
 
-	</div>
+</div>
 </div>
