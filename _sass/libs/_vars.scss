@@ -1,0 +1,54 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000,
+		z-index-overlay:	100000,
+		max-spotlight:		20
+	);
+
+// Duration.
+	$duration: (
+		navPanel:			0.5s,
+		transition:			0.2s,
+		landing-fadein:		1.5s
+	);
+
+// Size.
+	$size: (
+		border-radius:		4px,
+		element-height:		3em,
+		element-margin:		2em,
+		navPanel:			275px,
+		container-width:	70em
+	);
+
+// Font.
+// A serif display face for headings, paired with a readable humanist
+// sans for body copy, per the editorial/academic direction of the redesign.
+	$font: (
+		family:				('Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif),
+		family-heading:		('Cormorant Garamond', 'Libre Baskerville', Georgia, serif),
+		family-fixed:		('Courier New', monospace),
+		weight:				400,
+		weight-bold:		600
+	);
+
+// Palette.
+// Warm off-white / charcoal / muted navy / restrained clay accent —
+// a light editorial palette, replacing the theme's original dark scheme.
+	$palette: (
+		bg:					#faf6f0,
+		bg-transparent:		rgba(250,246,240,0.95),
+		fg-bold:			#2c3e50,
+		fg:					rgba(43,42,40,0.88),
+		fg-light:			rgba(43,42,40,0.58),
+		fg-lighter:			rgba(43,42,40,0.2),
+		border:				rgba(43,42,40,0.16),
+		border-bg:			rgba(43,42,40,0.045),
+		border2:			rgba(43,42,40,0.32),
+		border2-bg:			rgba(43,42,40,0.12),
+		accent1:			#a8573c,
+		accent2:			#f1e9db,
+		accent2-transparent:rgba(241,233,219,0.96),
+		accent3:			#5b7a94,
+		accent4:			#6b8f71
+	);

@@ -1,0 +1,23 @@
+title: "Óscar A. Chávez Ortiz"
+description: "Astrophysics researcher and data scientist working in higher education and assessment analytics."
+url: "https://chavezoscar009.github.io"
+
+markdown: kramdown
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - README.txt
+  - LICENSE.txt
+  - CNAME.example
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

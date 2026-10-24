@@ -1,3 +1,5 @@
+---
+---
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
@@ -5,12 +7,12 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import url('fontawesome-all.min.css');
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
 /*
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Design tokens (palette, type, motion) live in _sass/libs/_vars.scss,
+	read through the _palette()/_font()/_size()/_duration() functions
+	below and throughout this file. Edit the maps there, not ad hoc
+	values here, to keep the site visually consistent.
 */
 
 // Breakpoints.
@@ -175,14 +177,38 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
+		font-family: _font(family-heading);
 		font-weight: _font(weight-bold);
-		line-height: 1em;
+		line-height: 1.2em;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
 
 		a {
 			color: inherit;
 			border: 0;
 		}
+	}
+
+	// Visible keyboard focus indicator, applied globally. Several
+	// interactive elements below reset `outline: 0` for mouse users
+	// (e.g. the nav links and mobile toggle); this restores a clear
+	// indicator for keyboard users without re-adding the default
+	// browser outline everywhere.
+	:focus-visible {
+		outline: solid 2px _palette(accent1);
+		outline-offset: 2px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*, *::before, *::after {
+			animation-duration: 0.001ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.001ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+
+	html {
+		scroll-behavior: smooth;
 	}
 
 	h2 {
