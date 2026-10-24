@@ -1610,6 +1610,8 @@
 				img {
 					border-radius: 100%;
 					display: block;
+					height: 100%;
+					object-fit: cover;
 					width: 100%;
 				}
 			}
