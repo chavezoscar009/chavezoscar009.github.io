@@ -1,0 +1,24 @@
+- slug: sbi-lyra
+  title: "Developing a Python Package: Lyra"
+  summary: "A pip-installable simulation-based inference package mapping galaxy properties to Lyman-alpha emission, trained on 11 million galaxies."
+  github_url: "https://github.com/astroscar09/lyra"
+- slug: airline-delay-sql
+  title: "Airline Delay: Automated SQL Ingestion and Querying"
+  summary: "A scalable SQLite ingestion pipeline and set of analytics-ready SQL views for U.S. airline delay data, feeding a Tableau dashboard."
+  github_url: "https://github.com/astroscar09/airline_delay_project"
+- slug: audio-pain-detection
+  title: "Auditory Pain Detection (Medical Application)"
+  summary: "Using CLAP audio embeddings to classify physical pain from voice recordings, and what speaker-identity bias reveals about generalization."
+  github_url: "https://github.com/astroscar09/tame_pain_analysis"
+- slug: ml-comparison
+  title: "Predicting Lyman-α Emission with Machine Learning"
+  summary: "Comparing neural networks, Random Forest, Decision Trees, and XGBoost to model intrinsic Lyman-alpha emission across 11,000+ galaxies."
+  github_url: "https://github.com/astroscar09/Model_Selection_ML"
+- slug: h1n1-vaccine-aws
+  title: "Flu Shot Learning: H1N1 and Seasonal Flu Vaccination"
+  summary: "An XGBoost pipeline deployed on Amazon SageMaker to predict vaccination likelihood from survey data."
+  github_url: "https://github.com/astroscar09/DS/tree/main/H1N1_Predictions/srcdir"
+- slug: hypothesis-testing
+  title: "Hypothesis Testing: Golf Ball A/B Test"
+  summary: "A rigorous hypothesis-testing workflow comparing driving distances between two golf ball designs."
+  github_url: "https://github.com/astroscar09/DS/tree/main/Hypothesis_Testing"

@@ -1,0 +1,15 @@
+title: "Óscar A. Chávez Ortiz"
+description: "Astrophysics researcher and data scientist, now an Assessment Analyst in Career Services at San Diego State University."
+url: "https://chavezoscar009.github.io"
+
+markdown: kramdown
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - README.txt
+  - LICENSE.txt
