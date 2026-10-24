@@ -2087,6 +2087,28 @@
 
 	}
 
+/* Project Card */
+// Used on /projects/ — replaces DS_Projects.html's per-page inline
+// <style> block (cream background, hardcoded colors) with a token-
+// driven variant of the theme's existing .box component.
+
+	.project-card {
+		border-left: solid 4px _palette(accent1);
+
+		h3 {
+			margin-bottom: (_size(element-margin) * 0.25);
+
+			a {
+				border: 0;
+				color: _palette(fg-bold);
+
+				&:hover {
+					color: _palette(accent1);
+				}
+			}
+		}
+	}
+
 /* Photo Carousel */
 // Accessible replacement for Personal.html's old auto-cycling <img>
 // swap (assets/js/carousel.js): visible prev/next controls, pauses on
