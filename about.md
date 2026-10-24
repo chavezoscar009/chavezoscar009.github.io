@@ -24,8 +24,8 @@ I regularly participate in outreach activities aimed at making astronomy more ac
 - Departmental outreach events connecting students with active researchers.
 
 <figure class="image fit">
-	<img src="{{ '/images/AoT_Talk.jpg' | relative_url }}" alt="Óscar giving a public astronomy talk at Astronomy on Tap" />
-	<figcaption>Speaking at Astronomy on Tap (AoT), Celis Brewery, summer 2024 — on why Lyman-alpha matters.</figcaption>
+<img src="{{ '/images/AoT_Talk.jpg' | relative_url }}" alt="Óscar giving a public astronomy talk at Astronomy on Tap" />
+<figcaption>Speaking at Astronomy on Tap (AoT), Celis Brewery, summer 2024 — on why Lyman-alpha matters.</figcaption>
 </figure>
 
 ### Mentorship &amp; student support
