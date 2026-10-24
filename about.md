@@ -7,8 +7,7 @@ permalink: /about/
 
 I'm Óscar Chávez Ortiz. I recently completed my Ph.D. in Astronomy at The University of Texas at Austin, where I studied how Lyman-alpha light escapes from galaxies and what that reveals about the reionization of the early universe. Along the way, I built a parallel set of skills in data pipelines, machine learning, and statistical inference — tools I now bring to a different kind of problem.
 
-<!-- PLACEHOLDER: confirm exact current title and institution/employer -->
-I currently work in higher education, in assessment and data analytics, where I apply the same rigor I developed in astrophysics research — careful measurement, uncertainty quantification, and reproducible analysis — to institutional data and decision-making.
+I currently work as an Assessment Analyst for the Career Services department at San Diego State University, where I apply the same rigor I developed in astrophysics research — careful measurement, uncertainty quantification, and reproducible analysis — to questions about student outcomes, career readiness, and institutional decision-making.
 
 What motivates me hasn't changed much since graduate school: I like taking a messy, large dataset and finding the signal in it, whether that signal is a galaxy's chemical history or a pattern in how students learn. I'm equally interested in the people side of that work — mentoring students, building tools other people can use, and making technical work legible to the people who need to act on it.
 
