@@ -211,6 +211,17 @@
 		scroll-behavior: smooth;
 	}
 
+	// h1 has no size rule in the base reset above (it's reset to 100%,
+	// i.e. body text size) because the original theme only ever used h1
+	// for the site logo and used h2 for page/section titles. Our page
+	// layouts use h1 for the actual page title, so it needs its own
+	// (largest) size in the hierarchy.
+	h1 {
+		font-size: 2.75em;
+		line-height: 1.2em;
+		letter-spacing: -0.025em;
+	}
+
 	h2 {
 		font-size: 2em;
 		line-height: 1.5em;
@@ -478,6 +489,12 @@
 			color: _palette(fg-bold);
 			position: relative;
 			margin: 0 0 (_size(element-margin) * 0.75) 0;
+		}
+
+		h1 + p {
+			font-size: 1.35em;
+			margin-top: (_size(element-margin) * -0.5);
+			line-height: 1.75em;
 		}
 
 		h2 + p {
@@ -1856,6 +1873,10 @@
 
 			body, input, select, textarea {
 				font-size: 12pt;
+			}
+
+			h1 {
+				font-size: 2em;
 			}
 
 			h2 {
